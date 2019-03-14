@@ -1,16 +1,40 @@
 div {
-background-color: darkgray;
-}
-#container > div {
-    width: 75%;
+background-color: rgb(131, 0, 0);
 }
 #container {
-    background-color: beige;
-    margin: auto;
-    margin: 40px auto;
+    width: 600px;
+    background-color: rgb(58, 58, 58);
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
     text-align: center;
-    width: 500px;
+    line-height: 35px;
+    justify-content: space-evenly;
+    align-items: center;
 }
+#container > div {
+    height: 100px;
+    width: 100px;
+}
+#container > div:nth-child(1) {
+    background-color: blueviolet;
+    height: 25px;
+    width: 25px;
+}
+#container > div:nth-child(2) {
+    background-color: rgb(43, 137, 226);
+    height: 50px;
+}
+#container > div:nth-child(3) {
+    background-color: rgb(43, 226, 141);
+    height: 75px;
+}
+#container > div:hover {
+    flex-grow: 1.5;
+    background-color: rgb(235, 151, 54);
+    transition: all 0.5s linear;
+}
+/*
 div.first {
     background-color: darkorange;
 }
@@ -22,3 +46,4 @@ div.second:hover {
     background-color: blueviolet;
     transition: all 0.5s linear;
 }
+*/
