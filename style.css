@@ -1,0 +1,24 @@
+div {
+background-color: darkgray;
+}
+#container > div {
+    width: 75%;
+}
+#container {
+    background-color: beige;
+    margin: auto;
+    margin: 40px auto;
+    text-align: center;
+    width: 500px;
+}
+div.first {
+    background-color: darkorange;
+}
+div.second {
+    background-color: darkgoldenrod;
+}
+div.second:hover {
+    height: 300px;
+    background-color: blueviolet;
+    transition: all 0.5s linear;
+}
