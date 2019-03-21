@@ -24,7 +24,7 @@ html, body {
 .container > div {
     transition: background-color 1.5s ease-out;
 }
-.container > div:hover {
+.container > div:hover:not(:nth-child(16)) {
     transition: background-color ease;
     background-color: rgb(0, 255, 144);
 }
