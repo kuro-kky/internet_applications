@@ -33,7 +33,6 @@ html, body {
     transition: background-color ease;
     background-color: #3b3b3b;
     border: #242424 2px solid;
-    color: black;
 }
 #container > div:nth-child(1) {
     grid-row: 4;
