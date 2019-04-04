@@ -28,6 +28,12 @@ const init = () => {
         div.textContent = el.txt;
         div.style.gridColumn = el.col;
         div.style.gridRow = el.row;
+        if (el.txt == 'DISPLAY'){div.id='display';}else{
+        div.addEventListener('click', ev => {
+            const d = document.getElementById('display');
+            d.textContent = ev.target.textContent;
+        })
+    }
         container.appendChild(div);
 //        console.log(div);
     });
