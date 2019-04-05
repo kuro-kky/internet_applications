@@ -32,17 +32,18 @@ const init = () => {
         div.addEventListener('click', ev => {
             const d = document.getElementById('display');
             d.textContent = ev.target.textContent;
+            ev.target.textContent = '#';        
         })
     }
         container.appendChild(div);
 //        console.log(div);
     });
     document.body.appendChild(container);
-/*
+
     for(let i=0; i<fields.length; i++) {
         console.log(fields[i]);
     }
-*/
+
 }
 
 window.addEventListener('DOMContentLoaded', init);
