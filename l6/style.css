@@ -3,10 +3,10 @@ html, body {
 	height: 100%;
 }
 #container {
-    min-width: 30%;
-    max-width: 350px;
-    min-height: 70%;
-    max-height: 600px;
+    min-width: 25%;
+    max-width: 25%;
+    min-height: 65%;
+    max-height: 65%;
     display: grid;
     background-color: #2c2c2c;
     color: rgb(134, 227, 240);
