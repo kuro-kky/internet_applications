@@ -32,11 +32,12 @@ html, body {
 
 ::selection { background: transparent; } ::-moz-selection { background: transparent; }
 
+
+/*animation*/
+
 #container > div:active:not(:nth-child(16)){
     transform: translateY(1px);
 }
-
-/*animation*/
 
 #container > div:hover:not(:nth-child(16)) {
     transition: background-color ease;
