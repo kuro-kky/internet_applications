@@ -1,3 +1,3 @@
 # internet_applications
 
-https://puu.sh/DaBiF/b6634ddd0b.png
+![calc scr](https://puu.sh/DaBiF/b6634ddd0b.png)
