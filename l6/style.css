@@ -9,7 +9,7 @@ html, body {
     max-height: 65%;
     display: grid;
     background-color: #2c2c2c;
-    color: rgb(134, 227, 240);
+    color: #D1EBEF;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
     margin: 20px auto 0;
@@ -27,7 +27,8 @@ html, body {
 }
 
 #container > div:nth-child(16) {
-    background-color: #3c3c3c;
+    background-color: #262626;
+    color: #A6EEF6;
 }
 
 ::selection { background: transparent; } ::-moz-selection { background: transparent; }
@@ -42,5 +43,10 @@ html, body {
 #container > div:hover:not(:nth-child(16)) {
     transition: background-color ease;
     background-color: #3b3b3b;
-    border: #242424 2px solid;
+    border: #424242 2px solid;
+}
+
+#container > div:nth-child(n+12):hover:not(:nth-child(16)) {
+    transition: background-color ease-in;
+    background-color: #878787;
 }

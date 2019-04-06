@@ -32,7 +32,7 @@ const init = () => {
         div.addEventListener('click', ev => {
             const d = document.getElementById('display');
             d.textContent = ev.target.textContent;
-            ev.target.textContent = '#';        
+            ev.target.textContent = '#';  
         })
     }
         container.appendChild(div);
