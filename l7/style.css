@@ -1,0 +1,51 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+#container {
+    width: 30%;
+    height: 65%;
+    display: grid;
+    background-color: #2c2c2c;
+    color: #D1EBEF;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+    margin: 20px auto 0;
+    border: #353535 1px solid;
+}
+#container > div {
+    font: normal 18pt sans-serif;
+    line-height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    border: #353535 1px solid;
+    transition: background-color 1.5s ease-out;
+}
+
+#container > div:nth-child(16) {
+    background-color: #262626;
+    color: #A6EEF6;
+}
+
+::selection { background: transparent; } ::-moz-selection { background: transparent; }
+
+
+/*animation*/
+
+#container > div:active:not(:nth-child(16)){
+    transform: translateY(1px);
+}
+
+#container > div:hover:not(:nth-child(16)) {
+    transition: background-color ease;
+    background-color: #3b3b3b;
+    border: #424242 2px solid;
+}
+
+#container > div:nth-child(n+12):hover:not(:nth-child(16)) {
+    transition: background-color ease-in;
+    background-color: #878787;
+    border: #8d8d8d 2px solid;
+}
