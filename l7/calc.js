@@ -15,15 +15,13 @@ const fields = [
     { txt: '=', row: 3, col: 4 },
     { txt: 'C', row: 2, col: 4 },
     { txt: 'DISPLAY', row: 1, col: '1/5' },
-    /*
-    '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', '-', '+', '=', 'C', 'DISPLAY'
-    */
 ];
 
 
 let mem = 0;
 let op = 0;
 let clearFlag = false;
+
 
 const handleClick = ev => {
     const disp = document.getElementById('display');
@@ -35,36 +33,38 @@ const handleClick = ev => {
             mem = op = 0;
             break;
         case '+':
+                mem = parseFloat(disp.textContent);
+                op = key === '+' ? 1 : -1;
+                disp.textContent = '+';
+                break;
         case '-':
-            if (op === 0) {
                 mem = parseFloat(disp.textContent);
-            } else {
-                mem += op * parseFloat(disp.textContent);
-            }
-            op = key === '+' ? 1 : -1;
-            break;
+                op = key === '+' ? -1 : 1;
+                disp.textContent = '-';
+                break;
         case '=':
-            if (op === 0) {
-                mem = parseFloat(disp.textContent);
-            } else {
-                mem += op * parseFloat(disp.textContent);
-            }
-            op = 0;
-            disp.textContent = mem;
-            break;
+                if (op === 0) {
+                    mem = parseFloat(disp.textContent);
+                } else {
+                    mem += op * parseFloat(disp.textContent);
+                }
+                op = 0;
+                disp.textContent = mem;
+                break;
         default:
-            if (key === '.' && disp.textContent.includes ('.') || clearFlag) return;
-            if (key === '0' && disp.textContent === '0') return;
-            if ((disp.textContent === '0' && key !== '.') || clearFlag) {
-                disp.textContent = key;
-            } else {
-                disp.textContent += key;
-             }
-
-            break;
+                if (key === '.' && disp.textContent.includes ('.') || clearFlag) return;
+                if (key === '0' && disp.textContent === '0') return;
+                if ((disp.textContent === '0' && key !== '.') || clearFlag) {
+                    disp.textContent = key;
+                }
+                else {
+                    disp.textContent += key;
+                 }
+                break;
     }
-
 }
+
+
 const init = () => {
     const container = document.createElement('div');
     container.id = 'container';
