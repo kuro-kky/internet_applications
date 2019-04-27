@@ -25,20 +25,29 @@ const fields = [
     { txt: 'T', row: 4, col:6 },
 ];
 
-/*
+
+//let mem = "";
+let field = document.getElementsByClassName("field");
+
 const oClick = ev => {
     const key = ev.target.textContent;
-    //document.getElementById('container').style.color = "#000000";
-    const c = key;
-    do {
-
-        div.style.el.txt = black;
+    //const c = key;
+    function ChangeClass(div) {
+        var className = ev.target.getAttribute("class");
+        if(div.className=="closed"){
+            div.className = "open";
+        } else {
+            div.className = "closed";
+        }
     }
-    while(){}
-    if (key = ) {
-        disp.textContent = key;
+    ChangeClass();
 }
-*/
+
+var displayField = function(){
+    this.classList.toggle("open");
+    this.classList.toggle("closed");
+}
+
 const init = () => {
     const container = document.createElement('div');
     container.id = 'container';
@@ -47,9 +56,9 @@ const init = () => {
         div.textContent = el.txt;
         div.style.gridColumn = el.col;
         div.style.gridRow = el.row;
-//        div.addEventListener('click', oClick);
-        container.appendChild(div);
-    });
+        div.addEventListener("click", displayField);
+        container.appendChild(div).className = "closed";
+    })
     document.body.appendChild(container);
 }
 /*

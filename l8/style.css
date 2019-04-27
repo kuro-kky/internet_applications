@@ -14,25 +14,28 @@ html, body {
     border: 2px solid black;
 }
 #container > div {
-    background-color: lightgray;
     font: normal 40pt sans-serif;
     line-height: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#container > div.closed {
+    background-color: lightgray;
     transition: background-color 0.2s ease-out;
     color: transparent;
 }
-
+#container > div.open {
+    background-color: lightblue;
+    color: black;
+}
 ::selection { background: transparent; } ::-moz-selection { background: transparent; }
 
 /* animation */
 
-#container > div:active{
-    background-color: lightblue;
-    transform: translateY(1px);
-}
+
+/*
 #container > div:nth-child(2) {
     background-color: lightblue;
     color: black;

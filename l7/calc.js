@@ -33,13 +33,15 @@ const handleClick = ev => {
             mem = op = 0;
             break;
         case '+':
+                op = 1;
                 mem = parseFloat(disp.textContent);
-                op = key === '+' ? 1 : -1;
+                //op = key === '+' ? 1 : -1;
                 disp.textContent = '+';
                 break;
         case '-':
+                op = -1;
                 mem = parseFloat(disp.textContent);
-                op = key === '+' ? -1 : 1;
+                //op = key === '+' ? -1 : 1;
                 disp.textContent = '-';
                 break;
         case '=':
