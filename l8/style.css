@@ -40,24 +40,5 @@ html, body {
     background-color: red;
     color: black;
 }
+
 ::selection { background: transparent; } ::-moz-selection { background: transparent; }
-
-/* animation */
-
-
-/*
-#container > div:nth-child(2) {
-    background-color: lightblue;
-    color: black;
-}
-#container > div:nth-child(5) {
-    background-color: lightblue;
-    color: black;
-}#container > div:nth-child(15) {
-    background-color: lightblue;
-    color: black;
-}
-#container > div:nth-child(22) {
-    background-color: lightblue;
-    color: black;
-}
