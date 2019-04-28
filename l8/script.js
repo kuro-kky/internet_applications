@@ -26,27 +26,16 @@ const fields = [
 ];
 
 
-//let mem = "";
-let field = document.getElementsByClassName("field");
 
-const oClick = ev => {
-    const key = ev.target.textContent;
-    //const c = key;
-    function ChangeClass(div) {
-        var className = ev.target.getAttribute("class");
-        if(div.className=="closed"){
-            div.className = "open";
-        } else {
-            div.className = "closed";
-        }
-    }
-    ChangeClass();
-}
+
+
 
 var displayField = function(){
     this.classList.toggle("open");
     this.classList.toggle("closed");
+    //this.classList.toggle("locked");
 }
+
 
 const init = () => {
     const container = document.createElement('div');
@@ -61,9 +50,5 @@ const init = () => {
     })
     document.body.appendChild(container);
 }
-/*
-for(let i=0; i<fields.length; i++) {
-    console.log(fields[i]);
-}
-*/
+
 window.addEventListener('DOMContentLoaded', init);

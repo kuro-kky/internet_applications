@@ -20,14 +20,24 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.2s ease-out;
+    transform: scale(1);
 }
+#container > div:active {
+    transform: scale(0.97);
+    transition: transform .3s;
+}
+
 #container > div.closed {
     background-color: lightgray;
-    transition: background-color 0.2s ease-out;
     color: transparent;
 }
 #container > div.open {
     background-color: lightblue;
+    color: black;
+}
+#container > div.locked {
+    background-color: red;
     color: black;
 }
 ::selection { background: transparent; } ::-moz-selection { background: transparent; }
